@@ -208,6 +208,7 @@ WHERE ID IN (
 
 **Output:**
 
+![image](https://github.com/user-attachments/assets/b2d89532-3f8e-422f-992e-e03d4fa86dcd)
 
 **Question 6**
 ---
