@@ -38,39 +38,103 @@ DROP VIEW view_name;
 
 **Question 1**
 --
--- Paste Question 1 here
+Write a query to display all the customers whose ID is the difference between the salesperson ID of Mc Lyon and 2001.
+
+salesman table
+
+name             type
+---------------  ---------------
+salesman_id      numeric(5)
+name                 varchar(30)
+city                    varchar(15)
+commission       decimal(5,2)
+
+customer table
+
+name         type
+-----------  ----------
+customer_id  int
+cust_name    text
+city         text
+grade        int
+salesman_id  int
 
 ```sql
--- Paste your SQL code below for Question 1
+SELECT customer_id, cust_name, city, grade, salesman_id
+FROM customer
+WHERE customer_id = (SELECT salesman_id - 2001 FROM salesman WHERE name = 'Mc Lyon');
 ```
 
 **Output:**
 
-![Output1](output.png)
+![image](https://github.com/user-attachments/assets/4142751e-6f91-4ccc-a88e-b7071e18ee9c)
 
 **Question 2**
 ---
--- Paste Question 2 here
+From the following tables, write a SQL query to find all the orders generated in New York city. Return ord_no, purch_amt, ord_date, customer_id and salesman_id.
+
+SALESMAN TABLE
+
+name               type
+-----------        ----------
+salesman_id  numeric(5)
+name             varchar(30)
+city                 varchar(15)
+commission   decimal(5,2)
+
+ORDERS TABLE
+
+name            type
+----------      ----------
+ord_no          int
+purch_amt    real
+ord_date       text
+customer_id  int
+salesman_id  int
 
 ```sql
--- Paste your SQL code below for Question 2
+SELECT o.ord_no, o.purch_amt, o.ord_date, o.customer_id, o.salesman_id
+FROM orders o
+JOIN salesman s ON o.salesman_id = s.salesman_id
+WHERE s.city = 'New York';
 ```
 
 **Output:**
 
-![Output2](output.png)
+![image](https://github.com/user-attachments/assets/7b1d50e0-9f6f-46e2-9ae2-d77121f63af0)
 
 **Question 3**
 ---
--- Paste Question 3 here
+Write a SQL query to retrieve all columns from the CUSTOMERS table for customers whose salary is greater than $4500.
+
+Sample table: CUSTOMERS
+
+ID          NAME        AGE         ADDRESS     SALARY
+----------  ----------  ----------  ----------  ----------
+
+1          Ramesh     32              Ahmedabad     2000
+2          Khilan        25              Delhi                 1500
+3          Kaushik      23              Kota                  2000
+4          Chaitali       25             Mumbai            6500
+5          Hardik        27              Bhopal              8500
+6          Komal         22              Hyderabad       4500
+
+7           Muffy          24              Indore            10000
 
 ```sql
--- Paste your SQL code below for Question 3
+SELECT *
+FROM CUSTOMERS
+WHERE ID IN (
+    SELECT ID
+    FROM CUSTOMERS
+    WHERE SALARY > 4500
+);
 ```
 
 **Output:**
 
-![Output3](output.png)
+![image](https://github.com/user-attachments/assets/7279b79c-014d-4ea0-baf5-e2f793fa1d0d)
+
 
 **Question 4**
 ---
@@ -86,22 +150,63 @@ DROP VIEW view_name;
 
 **Question 5**
 ---
--- Paste Question 5 here
+Write a SQL query to retrieve all columns from the CUSTOMERS table for customers whose salary is LESS than $2500.
+
+Sample table: CUSTOMERS
+
+ID          NAME        AGE         ADDRESS     SALARY
+----------  ----------  ----------  ----------  ----------
+
+1          Ramesh     32              Ahmedabad     2000
+2          Khilan        25              Delhi                 1500
+3          Kaushik      23              Kota                  2000
+4          Chaitali       25             Mumbai            6500
+5          Hardik        27              Bhopal              8500
+6          Komal         22              Hyderabad       4500
+
+7           Muffy          24              Indore            10000
 
 ```sql
--- Paste your SQL code below for Question 5
+SELECT *
+FROM CUSTOMERS
+WHERE ID IN (
+    SELECT ID
+    FROM CUSTOMERS
+    WHERE SALARY < 2500
+);
 ```
 
 **Output:**
 
-![Output5](output.png)
+![image](https://github.com/user-attachments/assets/73dc3c95-af14-466c-b378-ab6ae8cfff75)
 
 **Question 6**
 ---
--- Paste Question 6 here
+Write a SQL query to Find employees who have an age less than the average age of employees with incomes over 1 million
 
+Employee Table
+
+name             type
+
+------------   ---------------
+
+id                    INTEGER
+
+name              TEXT
+
+age                 INTEGER
+
+city                 TEXT
+
+income           INTEGER
 ```sql
--- Paste your SQL code below for Question 6
+SELECT *
+FROM Employee
+WHERE age < (
+    SELECT AVG(age)
+    FROM Employee
+    WHERE income > 1000000
+);
 ```
 
 **Output:**
