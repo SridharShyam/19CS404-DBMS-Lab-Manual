@@ -90,6 +90,7 @@ END;
 ```
 
 **Output:**
+
 ![image](https://github.com/user-attachments/assets/0a408c13-de7c-4b76-92cd-4fc4c09ce065)
 
 ---
