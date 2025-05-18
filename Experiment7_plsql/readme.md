@@ -56,6 +56,7 @@ END;
 ```
 
 **Output:**  
+
 ![image](https://github.com/user-attachments/assets/6c87fae2-7aed-4dc5-8f46-afce76be0d58)
 
 ---
@@ -135,6 +136,7 @@ END;
 ```
 
 **Output:**
+
 ![image](https://github.com/user-attachments/assets/41dec93a-1d2c-44c5-b8bd-156c26a5c388)
 
 ---
@@ -171,6 +173,7 @@ END;
 ```
 
 **Output:**
+
 ![image](https://github.com/user-attachments/assets/9d5896ad-ae89-4d71-aa64-a0f3f4659d80)
 
 ---
@@ -209,6 +212,7 @@ END;
 ```
 
 **Output:**
+
 ![image](https://github.com/user-attachments/assets/11dcbe5f-2c2b-4e6d-879c-651267664111)
 
 ---
