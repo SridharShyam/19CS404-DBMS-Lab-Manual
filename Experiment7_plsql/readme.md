@@ -54,6 +54,7 @@ BEGIN
 END;
 /
 ```
+
 **Output:**  
 ![image](https://github.com/user-attachments/assets/6c87fae2-7aed-4dc5-8f46-afce76be0d58)
 
@@ -87,6 +88,7 @@ END;
 /
 
 ```
+
 **Output:**
 ![image](https://github.com/user-attachments/assets/0a408c13-de7c-4b76-92cd-4fc4c09ce065)
 
@@ -130,8 +132,8 @@ BEGIN
 END;
 /
 ```
-**Output:**
 
+**Output:**
 ![image](https://github.com/user-attachments/assets/41dec93a-1d2c-44c5-b8bd-156c26a5c388)
 
 ---
