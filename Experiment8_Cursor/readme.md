@@ -61,7 +61,10 @@ EXCEPTION
       -- Handling for unknown errors
 END;
 ```
-
+```
+NAME: SHYAM S
+REGISTER.NO: 212223240156
+```
 ### **Question 1: Simple Cursor with Exception Handling**
 
 **Write a PL/SQL program using a simple cursor to fetch employee names and designations from the `employees` table. Implement exception handling for the following cases:**
@@ -75,6 +78,8 @@ END;
 - Insert some sample data into the table.
 - Use a simple cursor to fetch and display employee names and designations.
 - Implement exception handling to catch the relevant exceptions and display appropriate messages.
+
+**Code:**
 
 **Output:**  
 The program should display the employee details or an error message.
